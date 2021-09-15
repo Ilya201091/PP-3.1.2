@@ -31,7 +31,6 @@ public class AdminController {
     @GetMapping("/users")
     public String getAllUsers(Model model, Principal principal) {
         User user = (User) userService.loadUserByUsername(principal.getName());
-        System.out.println(user.getNickname());
         model.addAttribute("userAuthorized",user);
         model.addAttribute("listUsers", userService.allUser());
         model.addAttribute("newUser",new User());
@@ -39,12 +38,6 @@ public class AdminController {
         model.addAttribute("listRoles",listRoles);
         return "admin/listUsers";
     }
-
-  /*  @GetMapping("/{id}")
-    public String findUserId(@PathVariable("id")Long id, Model model) {
-        model.addAttribute("user", userService.getUserById(id));
-        return "admin/showUserId";
-    }*/
 
     @GetMapping("/create")
     public String newUser(@ModelAttribute("user") User user, Model model) {

@@ -48,7 +48,6 @@ public class UserDaoImpl implements UserDAO {
 
     @Override
     public User getUserByNickname(String nickname) {
-        System.out.println(nickname);
         return entityManager.createQuery("SELECT u FROM User u WHERE u.nickname = '"+ nickname +"'", User.class).getSingleResult();
     }
 }

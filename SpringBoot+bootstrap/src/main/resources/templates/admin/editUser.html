@@ -61,7 +61,7 @@
                             <select th:name="idRoles" multiple class="form-control">
                                 <option th:each="role : ${listRoles}"
                                         th:value="${role.id}"
-                                        th:selected="${role.getRoleName().equals('ROLE_USER')}"
+                                        th:selected="${role.getRoleName().equals('ROLE_ADMIN')}"
                                         th:text="${role.getRoleName().substring(5)}">
                                 </option>
                             </select>
