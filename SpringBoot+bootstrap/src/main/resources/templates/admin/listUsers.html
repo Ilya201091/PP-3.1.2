@@ -119,22 +119,22 @@
                                                                             <div class="form-group">
                                                                                 <b>First name</b>
                                                                                 <input class="form-control" type="text"
-                                                                                       th:value="${user.nickname}" name="nickname"/>
+                                                                                       th:value="*{nickname}" name="nickname"/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Age </b>
                                                                                 <input class="form-control" type="number"
-                                                                                       th:value="${user.age}" name="age"/>
+                                                                                       th:value="*{age}" name="age"/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>E-mail</b>
                                                                                 <input class="form-control" type="email"
-                                                                                       th:value="${user.email}" name="email"/>
+                                                                                       th:value="*{email}" name="email"/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Password </b>
                                                                                 <input class="form-control" type="password"
-                                                                                       th:value="${user.password}" name="password"/>
+                                                                                       th:value="*{password}" name="password"/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Role </b>
@@ -186,17 +186,17 @@
                                                                             <div class="form-group">
                                                                                 <b>Nickname </b>
                                                                                 <input class="form-control" type="text"
-                                                                                       th:value="${user.nickname}" name="nickname" disabled/>
+                                                                                       th:value="*{nickname}" name="nickname" disabled/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Email </b>
                                                                                 <input class="form-control" type="text"
-                                                                                       th:value="${user.email}" name="Email" disabled/>
+                                                                                       th:value="*{email}" name="Email" disabled/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Age</b>
                                                                                 <input class="form-control" type="number"
-                                                                                       th:value="${user.age}" name="age" disabled/>
+                                                                                       th:value="*{age}" name="age" disabled/>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <b>Role</b>

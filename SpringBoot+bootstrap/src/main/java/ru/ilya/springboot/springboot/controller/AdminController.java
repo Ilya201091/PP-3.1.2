@@ -75,6 +75,7 @@ public class AdminController {
             listRoles.add(roleService.findRoleById(idRole));
         }
         user.setRoles(listRoles);
+        System.out.println(user);
         userService.updateUser(user);
         return "redirect:/admin/users";
     }

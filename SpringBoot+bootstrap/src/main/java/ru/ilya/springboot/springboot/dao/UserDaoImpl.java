@@ -1,5 +1,7 @@
 package ru.ilya.springboot.springboot.dao;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Repository;
 import ru.ilya.springboot.springboot.entities.User;
 
@@ -48,6 +50,8 @@ public class UserDaoImpl implements UserDAO {
 
     @Override
     public User getUserByNickname(String nickname) {
+
         return entityManager.createQuery("SELECT u FROM User u WHERE u.nickname = '"+ nickname +"'", User.class).getSingleResult();
     }
+
 }
